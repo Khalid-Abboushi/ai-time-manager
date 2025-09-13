@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiveLikeAI</title>
+    <meta name="description" content="Live Your Life Like AI" />
+    <meta name="author" content="Khalid A." />
+
+    <script type="module" crossorigin src="/ai-time-manager/assets/index-CV_HKvwt.js"></script>
+    <link rel="stylesheet" crossorigin href="/ai-time-manager/assets/index-BpXxi92c.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- index.html (recommended) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?
+family=Inter:wght@400;600;700;800&
+family=Roboto+Condensed:wght@700&
+family=Oswald:wght@600&
+family=Teko:wght@700&
+family=Quicksand:wght@700&
+family=Baloo+2:wght@700&
+family=Comfortaa:wght@700&
+family=Pacifico&
+family=Caveat:wght@700&
+family=Great+Vibes&
+family=Satisfy&
+family=Bangers&
+family=Black+Ops+One&
+display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+
+
+<script>
+  (function () {
+    try {
+      const storedRaw = localStorage.getItem("userSettings");
+      const stored = storedRaw ? JSON.parse(storedRaw) : {};
+      const saved = typeof stored?.preferences?.darkMode === "boolean"
+        ? stored.preferences.darkMode
+        : undefined;
+      const systemPrefersDark = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches ?? false;
+      const isDark = typeof saved === "boolean" ? saved : systemPrefersDark;
+
+      const root = document.documentElement;
+      root.classList.toggle("dark", isDark);
+      root.style.colorScheme = isDark ? "dark" : "light";
+    } catch (e) {
+      // swallow, best effort
+      console.warn("theme init failed", e);
+    }
+  })();
+</script>
+
+
+
+  </body>
+</html>
